@@ -49,10 +49,10 @@ class Solution:
             #type num: two integer values
             #return type: int dictionary
         result = {}
-        combs = num_actions  num_players
+        combs = num_actions ** num_players
 
         for i in range(combs):
-            action = tuple(i // (num_actions  j) % num_actions for j in range(num_players))
+            action = tuple(i // (num_actions ** j) % num_actions for j in range(num_players))
             result[i] = action
             result[action] = i
 
